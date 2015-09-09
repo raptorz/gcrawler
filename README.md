@@ -3,6 +3,7 @@
 A lightweight crawler framework using gevent.
 
 From [my hg repositry](https://bitbucket.org/raptorz/gcrawler)
+To [my git repositry](https://github.com/raptorz/gcrawler)
 
 ## Intro
 

@@ -1,24 +1,24 @@
-#!/usr/bin/env python
+from setuptools import setup, find_packages
+import sys, os
 
-from distutils.core import setup, find_packages
+version = '0.2'
 
-PACKAGE = 'gcrawler'
-
-try:
-    from distutils.command.build_py import build_py_2to3 as build_py
-except ImportError:
-    from distutils.command.build_py import build_py
-
-setup(
-    name = PACKAGE,
-    version = __import__(PACKAGE).__version__,
-    description = 'A lightweight crawler framework using gevent.',
-    author = 'Raptor Zhang',
-    author_email = 'raptor.zh@gmail.com',
-    url = 'http://www.github.com/raptorz/gcrawler',
-    license = 'BSD',
-    platforms = 'any',
-    requires = ['gevent'],
-    packages = find_packages(),
-    zip_safe = Fasle,
-)
+setup(name='gcrawler',
+      version=version,
+      description="A lightweight crawler framework using gevent",
+      classifiers=[], # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
+      keywords='crawler gevent',
+      author='Raptor Zhang',
+      author_email='raptor.zh@gmail.com',
+      url='https://bitbucket.org/raptorz/gcrawler',
+      license='BSD',
+      packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
+      include_package_data=True,
+      zip_safe=False,
+      install_requires=[
+          "gevent"
+      ],
+      entry_points="""
+      # -*- Entry points: -*-
+      """,
+      )
