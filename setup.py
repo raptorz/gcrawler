@@ -2,7 +2,7 @@
 
 from distutils.core import setup, find_packages
 
-PACKAGE = 'webget'
+PACKAGE = 'gcrawler'
 
 try:
     from distutils.command.build_py import build_py_2to3 as build_py
@@ -12,13 +12,13 @@ except ImportError:
 setup(
     name = PACKAGE,
     version = __import__(PACKAGE).__version__,
-    description = 'web UI for wget.',
+    description = 'A lightweight crawler framework using gevent.',
     author = 'Raptor Zhang',
     author_email = 'raptor.zh@gmail.com',
-    url = 'http://www.github.com/raptorz/webget',
-    license = 'APL',
+    url = 'http://www.github.com/raptorz/gcrawler',
+    license = 'BSD',
     platforms = 'any',
-    requires = ['bottle>=0.12', 'mako', 'requests'],
+    requires = ['gevent'],
     packages = find_packages(),
     zip_safe = Fasle,
 )
